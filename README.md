@@ -31,6 +31,61 @@ MAX_PER_PAGE=200
 
 **注意**: `.env` ファイルは `.gitignore` に含まれているため、Gitにはコミットされません。機密情報を安全に管理できます。
 
+## 使い方
+
+### 基本的な論文検索
+
+```python
+from openalex_search import OpenAlexSearch
+
+# 検索オブジェクトを作成
+search = OpenAlexSearch()
+
+# 論文を検索（最初の25件を取得）
+result = search.search_papers("machine learning", per_page=25)
+papers = result.get("results", [])
+
+# 論文情報を整形して表示
+for paper in papers:
+    formatted = search.format_paper_info(paper)
+    print(f"タイトル: {formatted['title']}")
+    print(f"著者: {', '.join(formatted['authors'])}")
+    print(f"発行年: {formatted['publication_year']}")
+    print(f"DOI: {formatted['doi']}")
+```
+
+### 網羅的な論文取得
+
+```python
+# 最大100件の論文を取得（複数ページにわたって自動取得）
+papers = search.get_all_papers(
+    query="transformer neural network",
+    max_results=100,
+    sort="cited_by_count:desc"  # 被引用数順
+)
+```
+
+### フィルタリングを使った検索
+
+```python
+# 2020年以降の論文を検索
+filter_params = {"publication_year": ">=2020"}
+result = search.search_papers(
+    query="large language model",
+    filter_params=filter_params
+)
+```
+
+### サンプルスクリプトの実行
+
+```bash
+# 様々な使用例を実行
+python search_example.py
+
+# または、対話的な検索を実行
+python -c "from search_example import interactive_search; interactive_search()"
+```
+
 ## 機能
 
 ### 1. OpenAlex APIを使用した論文の網羅的取得
