@@ -24,29 +24,17 @@ source venv/bin/activate
 
 ### 2. 依存関係のインストール
 
-**Python依存関係:**
 ```bash
+# Python依存関係
 pip install -r requirements.txt
+
+# TypeScript依存関係とコンパイル（フロントエンド用）
+cd frontend && npm install && npm run build && cd ..
 ```
 
-**TypeScript依存関係（フロントエンド用）:**
+開発中は、TypeScriptの変更を自動的にコンパイルするために以下を実行できます：
 ```bash
-cd frontend
-npm install
-cd ..
-```
-
-**TypeScriptのコンパイル:**
-```bash
-cd frontend
-npm run build
-cd ..
-```
-
-開発中は、変更を自動的にコンパイルするために以下を実行できます：
-```bash
-cd frontend
-npm run watch
+cd frontend && npm run watch
 ```
 
 ### 3. 環境変数の設定
