@@ -4,7 +4,15 @@ OpenAlex APIを使用して論文を検索するモジュール
 import requests
 from typing import List, Dict, Optional
 from datetime import datetime
-from config import Config
+import sys
+from pathlib import Path
+
+# プロジェクトルートをパスに追加
+project_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(project_root))
+
+from src.utils.config import Config
+from src.utils.query_processor import QueryProcessor
 
 
 class OpenAlexSearch:
@@ -12,13 +20,14 @@ class OpenAlexSearch:
     
     BASE_URL = "https://api.openalex.org/works"
     
-    def __init__(self, user_email: Optional[str] = None):
+    def __init__(self, user_email: Optional[str] = None, auto_optimize_query: bool = True):
         """
         OpenAlexSearchの初期化
         
         Args:
             user_email: User-Agentに設定するメールアドレス
                        （Noneの場合はconfig.pyから読み込む）
+            auto_optimize_query: 長文クエリを自動的に最適化するか
         """
         self.session = requests.Session()
         # User-Agentを設定（OpenAlexの推奨事項）
@@ -26,6 +35,7 @@ class OpenAlexSearch:
         self.session.headers.update({
             'User-Agent': f'paper_research_agent/1.0 (mailto:{email})'
         })
+        self.query_processor = QueryProcessor() if auto_optimize_query else None
     
     def _convert_filter_value(self, value: str) -> str:
         """
@@ -76,23 +86,35 @@ class OpenAlexSearch:
             per_page: Optional[int] = None,
         page: int = 1,
         sort: str = "publication_date:desc",
-        filter_params: Optional[Dict[str, str]] = None
+        filter_params: Optional[Dict[str, str]] = None,
+        optimize_query: Optional[bool] = None
     ) -> Dict:
         """
         指定されたクエリで論文を検索する
         
         Args:
-            query: 検索クエリ（テーマやキーワード）
+            query: 検索クエリ（テーマやキーワード、長文も可）
             per_page: 1ページあたりの結果数（デフォルト: 25、最大: 200）
             page: ページ番号（デフォルト: 1）
             sort: ソート順（デフォルト: publication_date:desc）
             filter_params: 追加のフィルタパラメータ
                           （例: {"publication_year": ">=2020"} -> "2020-"に変換）
                           （例: {"publication_year": "2020-2023"} -> そのまま使用）
+            optimize_query: クエリを最適化するか（Noneの場合はauto_optimize_queryの設定を使用）
         
         Returns:
             検索結果の辞書（results, meta, count等を含む）
         """
+        # クエリの最適化
+        if optimize_query is None:
+            optimize_query = self.query_processor is not None
+        
+        if optimize_query and self.query_processor:
+            original_query = query
+            query = self.query_processor.optimize_query(query, method="auto")
+            if query != original_query:
+                print(f"クエリを最適化しました: '{original_query[:50]}...' -> '{query}'")
+        
         # per_pageが指定されていない場合はデフォルト値を使用
         if per_page is None:
             per_page = Config.DEFAULT_PER_PAGE
@@ -130,7 +152,8 @@ class OpenAlexSearch:
         query: str,
         max_results: Optional[int] = None,
         sort: str = "publication_date:desc",
-        filter_params: Optional[Dict[str, str]] = None
+        filter_params: Optional[Dict[str, str]] = None,
+        optimize_query: Optional[bool] = None
     ) -> List[Dict]:
         """
         指定されたクエリで論文を網羅的に取得する（複数ページにわたって取得）
@@ -154,7 +177,8 @@ class OpenAlexSearch:
                 per_page=per_page,
                 page=page,
                 sort=sort,
-                filter_params=filter_params
+                filter_params=filter_params,
+                optimize_query=optimize_query
             )
             
             papers = result.get("results", [])

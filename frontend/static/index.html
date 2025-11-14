@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>論文研究エージェント</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>論文研究エージェント</h1>
+            <p class="subtitle">調べたい論文について教えてください</p>
+        </header>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="message assistant-message">
+                <div class="message-content">
+                    こんにちは！論文研究エージェントです。調べたい論文について教えてください。
+                    情報が不足している場合は、質問させていただきます。
+                </div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="メッセージを入力..."
+                    rows="1"
+                ></textarea>
+                <button id="sendButton" class="send-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+            <div class="action-buttons">
+                <button id="resetButton" class="reset-button">新しい会話を開始</button>
+            </div>
+        </div>
+
+        <div id="loadingIndicator" class="loading-indicator" style="display: none;">
+            <div class="spinner"></div>
+            <span>処理中...</span>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
+
