@@ -1,0 +1,343 @@
+[
+  {
+    "id": "https://openalex.org/W7104033187",
+    "title": "Resource-adaptive successive doubling for hyperparameter optimization with large datasets on high-performance computing systems",
+    "authors": [
+      "Aach, Marcel",
+      "Sarma Rakesh",
+      "Neukirchen, Helmut",
+      "Riedel Morris",
+      "Lintermann, Andreas"
+    ],
+    "publication_year": 2026,
+    "publication_date": "2026-01-01",
+    "doi": "10.34734/fzj-2025-03484",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.34734/fzj-2025-03484",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.34734/fzj-2025-03484"
+  },
+  {
+    "id": "https://openalex.org/W7105467730",
+    "title": "Large-Scale Empirical Image Enhancement Studies with Diverse HPC systems",
+    "authors": [
+      "ZHAI, LUJUN",
+      "Cui Su-xia"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-17",
+    "doi": "10.5281/zenodo.17581317",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.5281/zenodo.17581317",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.5281/zenodo.17581317"
+  },
+  {
+    "id": "https://openalex.org/W7103993713",
+    "title": "Large-Scale Empirical Image Enhancement Studies with Diverse HPC systems",
+    "authors": [
+      "ZHAI, LUJUN",
+      "Cui Su-xia"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-17",
+    "doi": "10.5281/zenodo.17528388",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.5281/zenodo.17528388",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.5281/zenodo.17528388"
+  },
+  {
+    "id": "https://openalex.org/W7104030088",
+    "title": "Large-Scale Empirical Image Enhancement Studies with Diverse HPC systems",
+    "authors": [
+      "ZHAI, LUJUN",
+      "Cui Su-xia"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-17",
+    "doi": "10.5281/zenodo.17528387",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.5281/zenodo.17528387",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.5281/zenodo.17528387"
+  },
+  {
+    "id": "https://openalex.org/W7104955520",
+    "title": "Large-Scale Empirical Image Enhancement Studies with Diverse HPC systems",
+    "authors": [
+      "ZHAI, LUJUN",
+      "Cui Su-xia"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-17",
+    "doi": "10.5281/zenodo.17581316",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.5281/zenodo.17581316",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.5281/zenodo.17581316"
+  },
+  {
+    "id": "https://openalex.org/W7105523413",
+    "title": "AI-Based Video Chaptering and Learning Support System",
+    "authors": [
+      "Atharva A. Digambar",
+      "Jasshan S. Bhalgat",
+      "Aditya N. Adak",
+      "Riyaz jamadar"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-13",
+    "doi": "10.48175/ijarsct-29833",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.48175/ijarsct-29833",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.48175/ijarsct-29833"
+  },
+  {
+    "id": "https://openalex.org/W7105544118",
+    "title": "Semantic Segmentation at Extreme Distances for Maritime Computer Vision",
+    "authors": [
+      "Wolodymyr Krywonos",
+      "Angelo Cangelosi"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-13",
+    "doi": "10.1007/978-981-95-4097-6_39",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": null,
+    "open_access": false,
+    "primary_location": "https://doi.org/10.1007/978-981-95-4097-6_39"
+  },
+  {
+    "id": "https://openalex.org/W7105039617",
+    "title": "Smart Detection of Macro Nutrient Deficiency in Soybean Plant using Convolutional Neural Network",
+    "authors": [
+      "R. Bhavani"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.18805/lr-5534",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.18805/lr-5534",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.18805/lr-5534"
+  },
+  {
+    "id": "https://openalex.org/W7105510702",
+    "title": "The validity and reliability of player tracking technology in team sports",
+    "authors": [
+      "Crang, Zachary"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.26199/acu/38151",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.26199/acu/38151",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.26199/acu/38151"
+  },
+  {
+    "id": "https://openalex.org/W7105149924",
+    "title": "Flat Optical Rotator Enabled by Conformal Mapping",
+    "authors": [
+      "Qing-song Yao",
+      "Yiming Ma",
+      "Chenfei Ma",
+      "Haonan Zhang",
+      "Tian Huang",
+      "Guoxing Zheng",
+      "Shaohua Yu",
+      "Zile Li"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.1002/lpor.202502470",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": null,
+    "open_access": false,
+    "primary_location": "https://doi.org/10.1002/lpor.202502470"
+  },
+  {
+    "id": "https://openalex.org/W7104958644",
+    "title": "Investigating How AI Can Support the Creation of Storyboards for Autism Education",
+    "authors": [
+      "Leon Parker"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.5281/zenodo.17585048",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.5281/zenodo.17585048",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.5281/zenodo.17585048"
+  },
+  {
+    "id": "https://openalex.org/W7104848134",
+    "title": "Digital Farm Link: A Trust-Centric Marketplace Integrating AI, Blockchain, IoT, and Federated Learning for Transparent Farmer-to-Consumer Trade",
+    "authors": [
+      "Prof. Chandan Wagh",
+      "Hanuman Bavane",
+      "Mayuri Hirade",
+      "Dr.Alpana Adsul",
+      "Darshan Bele",
+      "Shrutika Ghodake"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.48175/ijarsct-29826",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.48175/ijarsct-29826",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.48175/ijarsct-29826"
+  },
+  {
+    "id": "https://openalex.org/W7105024827",
+    "title": "AI-Based Helmet Monitoring and Face Recognition System at Building Construction Site: A Survey",
+    "authors": [
+      "Dr.Pradnya.D.Bormane",
+      "Amol Shirsat",
+      "Sushant Sabale",
+      "Harshwardhan Kumbharkar"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.48175/ijarsct-29820",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.48175/ijarsct-29820",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.48175/ijarsct-29820"
+  },
+  {
+    "id": "https://openalex.org/W7104990352",
+    "title": "A Survey on AI-Based Real-Time Yoga Pose Detection and Correction Systems",
+    "authors": [
+      "Dr. Pradnya Bormane",
+      "Soham Ingale",
+      "Aditya Jagtap",
+      "Siddhant Kokate"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.48175/ijarsct-29823",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.48175/ijarsct-29823",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.48175/ijarsct-29823"
+  },
+  {
+    "id": "https://openalex.org/W7105130953",
+    "title": "Toward the Reliable Deployment of Computer Vision Pipelines by Leveraging MLOps and Explainable AI",
+    "authors": [
+      "Evangelos Nerantzis",
+      "Georgios Symeonidis",
+      "Aikaterini Vouta Papageorgiou",
+      "George A. Papakostas"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.1007/978-981-96-8694-0_9",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": null,
+    "open_access": false,
+    "primary_location": "https://doi.org/10.1007/978-981-96-8694-0_9"
+  },
+  {
+    "id": "https://openalex.org/W7105546616",
+    "title": "Eduvision – AI Based Attention Monitoring and Engagement Feedback System for Online Learning",
+    "authors": [
+      "Ms.S.Anslam Sibi, S.Sandhiya, Sunkara Gopi Chand, S.Yuvasri"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.5281/zenodo.17587278",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.5281/zenodo.17587278",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.5281/zenodo.17587278"
+  },
+  {
+    "id": "https://openalex.org/W7105523064",
+    "title": "Detection of Road in Satellite Imagery",
+    "authors": [
+      "Rajeshwari S Hiremath, Mrs.Geetha N B"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.5281/zenodo.17587252",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.5281/zenodo.17587252",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.5281/zenodo.17587252"
+  },
+  {
+    "id": "https://openalex.org/W7105524371",
+    "title": "Detection of Road in Satellite Imagery",
+    "authors": [
+      "Rajeshwari S Hiremath, Mrs.Geetha N B"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.5281/zenodo.17587253",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.5281/zenodo.17587253",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.5281/zenodo.17587253"
+  },
+  {
+    "id": "https://openalex.org/W7104984742",
+    "title": "Detection of Bacterial Speck Disease (Pseudomonas syringae pv. tomato) in Tomato Plants Grown in Greenhouses Using Image Processing",
+    "authors": [
+      "İsmail ÖZTÜRK",
+      "Bahadır Demirel",
+      "Sümer HORUZ",
+      "Gürkan A. K. Gürdil"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.34248/bsengineering.1707394",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.34248/bsengineering.1707394",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.34248/bsengineering.1707394"
+  },
+  {
+    "id": "https://openalex.org/W7105115221",
+    "title": "AI-Based Early Disease Detection in Peach Crops: A Computer Vision Approach for Monilinia spp. and Taphrina deformans",
+    "authors": [
+      "Luisa Paola Zúñiga Castro",
+      "Leyiber Orlando Villa Pinto",
+      "Daniel Felipe Silva Gaona",
+      "Paola Andrea Mateus Abaunza",
+      "Sandra Milena García Ávila",
+      "Ricardo Alirio Gonzalez Bustamante"
+    ],
+    "publication_year": 2025,
+    "publication_date": "2025-11-12",
+    "doi": "10.21203/rs.3.rs-7895853/v1",
+    "abstract": "",
+    "citation_count": 0,
+    "pdf_url": "https://doi.org/10.21203/rs.3.rs-7895853/v1",
+    "open_access": true,
+    "primary_location": "https://doi.org/10.21203/rs.3.rs-7895853/v1"
+  }
+]

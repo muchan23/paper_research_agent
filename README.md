@@ -6,13 +6,29 @@
 
 ## セットアップ
 
-### 1. 依存関係のインストール
+### 1. 仮想環境の作成と有効化
+
+```bash
+# 仮想環境を作成（既に作成済みの場合はスキップ）
+python3 -m venv venv
+
+# 仮想環境を有効化
+# macOS/Linuxの場合:
+source venv/bin/activate
+
+# Windowsの場合:
+# venv\Scripts\activate
+```
+
+仮想環境が有効化されると、プロンプトに `(venv)` が表示されます。
+
+### 2. 依存関係のインストール
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. 環境変数の設定
+### 3. 環境変数の設定
 
 プロジェクトルートに `.env` ファイルを作成し、以下の設定を追加してください：
 

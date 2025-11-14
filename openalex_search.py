@@ -27,6 +27,49 @@ class OpenAlexSearch:
             'User-Agent': f'paper_research_agent/1.0 (mailto:{email})'
         })
     
+    def _convert_filter_value(self, value: str) -> str:
+        """
+        OpenAlex APIのフィルタ構文に変換する
+        
+        Args:
+            value: フィルタ値（例: ">=2020", "<=2020", "2020-2023"）
+        
+        Returns:
+            OpenAlex APIの構文に変換された値
+        """
+        value = value.strip()
+        
+        # >=2020 -> 2020- (2020年以降)
+        if value.startswith(">="):
+            year = value[2:].strip()
+            return f"{year}-"
+        
+        # <=2020 -> -2020 (2020年以前)
+        if value.startswith("<="):
+            year = value[2:].strip()
+            return f"-{year}"
+        
+        # >2020 -> 2021- (2021年以降、厳密には2020より大きい)
+        if value.startswith(">"):
+            year = value[1:].strip()
+            try:
+                year_int = int(year)
+                return f"{year_int + 1}-"
+            except ValueError:
+                return value
+        
+        # <2020 -> -2019 (2019年以前、厳密には2020より小さい)
+        if value.startswith("<"):
+            year = value[1:].strip()
+            try:
+                year_int = int(year)
+                return f"-{year_int - 1}"
+            except ValueError:
+                return value
+        
+        # その他の場合はそのまま返す（既に正しい形式の場合）
+        return value
+    
     def search_papers(
         self,
         query: str,
@@ -43,7 +86,9 @@ class OpenAlexSearch:
             per_page: 1ページあたりの結果数（デフォルト: 25、最大: 200）
             page: ページ番号（デフォルト: 1）
             sort: ソート順（デフォルト: publication_date:desc）
-            filter_params: 追加のフィルタパラメータ（例: {"publication_year": ">=2020"}）
+            filter_params: 追加のフィルタパラメータ
+                          （例: {"publication_year": ">=2020"} -> "2020-"に変換）
+                          （例: {"publication_year": "2020-2023"} -> そのまま使用）
         
         Returns:
             検索結果の辞書（results, meta, count等を含む）
@@ -63,7 +108,12 @@ class OpenAlexSearch:
         if filter_params:
             filter_strings = []
             for key, value in filter_params.items():
-                filter_strings.append(f"{key}:{value}")
+                # OpenAlex APIの構文に変換
+                # >=2020 -> 2020- (2020年以降)
+                # <=2020 -> -2020 (2020年以前)
+                # 2020-2023 -> 2020-2023 (範囲指定)
+                converted_value = self._convert_filter_value(value)
+                filter_strings.append(f"{key}:{converted_value}")
             if filter_strings:
                 params["filter"] = ",".join(filter_strings)
         
