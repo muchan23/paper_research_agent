@@ -14,7 +14,7 @@
     "declaration": false,
     "sourceMap": true
   },
-  "include": ["static/ts/**/*"],
+  "include": ["src/ts/**/*"],
   "exclude": ["node_modules", "venv"]
 }
 
